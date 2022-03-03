@@ -238,11 +238,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F488646F27B569B900F69A75 /* Build configuration list for PBXNativeTarget "TextFields" */;
 			buildPhases = (
-				F493981327B572AA007A091B /* ShellScript */,
 				8F3CF18A14D7AD135C37646F /* [CP] Check Pods Manifest.lock */,
+				F493981327B572AA007A091B /* ShellScript */,
 				F488645727B569B500F69A75 /* Sources */,
 				F488645827B569B500F69A75 /* Frameworks */,
 				F488645927B569B500F69A75 /* Resources */,
+				044FB8D847D3770C96066436 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -303,6 +304,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		044FB8D847D3770C96066436 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TextFields/Pods-TextFields-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TextFields/Pods-TextFields-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TextFields/Pods-TextFields-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8F3CF18A14D7AD135C37646F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
