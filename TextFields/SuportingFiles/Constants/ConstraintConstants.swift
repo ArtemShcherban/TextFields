@@ -7,8 +7,8 @@
 
 import Foundation
 import UIKit
-  
+
 enum Indents: CGFloat {
-        case left = 16
-        case right = -16
-    }
+    case left = 16
+    case right = -16
+}

@@ -41,14 +41,14 @@ final class SingleMainView: UIView {
     
     // Strength Level Views
     lazy var strengthLevelView = StrengthLevelView()
-
+    
     // Rule Text Labels
     private lazy var eightCharactersRule = AdjustableTextLabel()
     private lazy var oneDightRule = AdjustableTextLabel()
     private lazy var oneLowercaseRule = AdjustableTextLabel()
     private lazy var oneUppercaseRule = AdjustableTextLabel()
     lazy var ruleTextLabelsArray = [eightCharactersRule, oneDightRule, oneLowercaseRule, oneUppercaseRule]
-
+    
     func createSingleMainView() {
         addAllSubviews()
         setSubtitlesNames()

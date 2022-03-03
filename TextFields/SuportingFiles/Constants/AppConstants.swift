@@ -15,5 +15,6 @@ struct AppConstants {
     static let subtitleNamesArray = ["NO dights field", "Input Limit", "Only characters", "Link", "Validation rules"]
     static let textFieldPlaceholdersArray = ["Type here", "Type here", "WWWWW-DDDDD", "https://example.com", "Password"]
     static let maxNumberOfCharacters = 10
-    static let ruleTitlesArray = ["- minimum of 8 characters.", "- minimum 1 dight.", "- minimum 1 lowercased.", "- minimum 1 uppercased."]
+    static let ruleTitlesArray = ["- minimum of 8 characters.", "- minimum 1 dight.", "- minimum 1 lowercased.",
+                                  "- minimum 1 uppercased."]
 }

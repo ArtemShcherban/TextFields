@@ -30,10 +30,10 @@ final class AdjustableTextLabel: UILabel {
         configure()
         setTextColor()
     }
-        
-        private func setTextColor() {
-            textColor = isSatisfied ? satisfiedColor : unSatisfiedColor
-        }
+    
+    private func setTextColor() {
+        textColor = isSatisfied ? satisfiedColor : unSatisfiedColor
+    }
     
     private func configure() {
         backgroundColor = .white
