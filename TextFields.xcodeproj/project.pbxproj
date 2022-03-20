@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		077780A2E91FDDD96E0C2C0D /* Pods_TextFields.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 427A601E4FA381F0EB7F9A21 /* Pods_TextFields.framework */; };
+		F40DFBE627DF4BED0046302F /* NoDightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DFBE527DF4BED0046302F /* NoDightsViewController.swift */; };
+		F40DFBE927DF4C3A0046302F /* TextFieldMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DFBE827DF4C3A0046302F /* TextFieldMainView.swift */; };
+		F40DFBEB27DF5BCD0046302F /* TitleTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DFBEA27DF5BCD0046302F /* TitleTextLabel.swift */; };
+		F40DFBEE27E065390046302F /* OnlyCharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DFBED27E065390046302F /* OnlyCharactersViewController.swift */; };
+		F40DFBF027E067C70046302F /* LinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DFBEF27E067C70046302F /* LinkViewController.swift */; };
+		F40DFBF227E086110046302F /* InputLimitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DFBF127E086110046302F /* InputLimitViewController.swift */; };
+		F40DFBF427E097640046302F /* ValidationRulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40DFBF327E097640046302F /* ValidationRulesViewController.swift */; };
+		F40FE0B927E0ED750049B213 /* UITextFieldDeligateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40FE0B827E0ED750049B213 /* UITextFieldDeligateExtension.swift */; };
+		F40FE0BB27E0EF350049B213 /* HideKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40FE0BA27E0EF350049B213 /* HideKeyboardExtension.swift */; };
 		F42290E127B820E2008D4F79 /* NoDightsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42290E027B820E2008D4F79 /* NoDightsModel.swift */; };
 		F42290E927B96837008D4F79 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F42290E827B96837008D4F79 /* SFProDisplay-Regular.ttf */; };
 		F42290EB27B96929008D4F79 /* InputLimitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42290EA27B96929008D4F79 /* InputLimitModel.swift */; };
@@ -16,17 +25,20 @@
 		F42290F327BD5EFB008D4F79 /* OnlyCharModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42290F227BD5EFB008D4F79 /* OnlyCharModel.swift */; };
 		F42290F527BEC58F008D4F79 /* OnlyCharTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42290F427BEC58F008D4F79 /* OnlyCharTextField.swift */; };
 		F42290F927C12539008D4F79 /* LinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42290F827C12539008D4F79 /* LinkModel.swift */; };
-		F42290FB27C145B9008D4F79 /* LinkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42290FA27C145B9008D4F79 /* LinkTextField.swift */; };
 		F42290FD27C2B58F008D4F79 /* StrengthLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42290FC27C2B58F008D4F79 /* StrengthLevelView.swift */; };
 		F42290FF27C346D6008D4F79 /* ValidationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42290FE27C346D6008D4F79 /* ValidationModel.swift */; };
+		F44AA4DF27D8F3BF00448B2F /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44AA4DE27D8F3BF00448B2F /* InitialViewController.swift */; };
+		F44AA4E127D8F41D00448B2F /* InitialMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44AA4E027D8F41D00448B2F /* InitialMainView.swift */; };
+		F44AA4E327D8F6D600448B2F /* ControllerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44AA4E227D8F6D600448B2F /* ControllerButton.swift */; };
+		F44AA4E727D9173A00448B2F /* MultipleViewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44AA4E627D9173A00448B2F /* MultipleViewsController.swift */; };
 		F488645F27B569B500F69A75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F488645E27B569B500F69A75 /* AppDelegate.swift */; };
 		F488646127B569B500F69A75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F488646027B569B500F69A75 /* SceneDelegate.swift */; };
-		F488646327B569B500F69A75 /* SingleMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F488646227B569B500F69A75 /* SingleMainViewController.swift */; };
+		F488646327B569B500F69A75 /* GroupMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F488646227B569B500F69A75 /* GroupMainViewController.swift */; };
 		F488646627B569B500F69A75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F488646427B569B500F69A75 /* Main.storyboard */; };
 		F488646827B569B900F69A75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F488646727B569B900F69A75 /* Assets.xcassets */; };
 		F488646B27B569B900F69A75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F488646927B569B900F69A75 /* LaunchScreen.storyboard */; };
-		F493981527B5785B007A091B /* SingleMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493981427B5785B007A091B /* SingleMainView.swift */; };
-		F493981827B57FFE007A091B /* ConstraintConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493981727B57FFE007A091B /* ConstraintConstants.swift */; };
+		F493981527B5785B007A091B /* GroupMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493981427B5785B007A091B /* GroupMainView.swift */; };
+		F493981827B57FFE007A091B /* IndentsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493981727B57FFE007A091B /* IndentsConstants.swift */; };
 		F493981B27B58443007A091B /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F493981A27B58443007A091B /* Rubik-Medium.ttf */; };
 		F493981D27B58938007A091B /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493981C27B58938007A091B /* AppConstants.swift */; };
 		F493981F27B58A46007A091B /* FontConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493981E27B58A46007A091B /* FontConstants.swift */; };
@@ -40,6 +52,15 @@
 		427A601E4FA381F0EB7F9A21 /* Pods_TextFields.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextFields.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AA367BB0BD9C8BBC5B6F729 /* Pods-TextFields.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextFields.debug.xcconfig"; path = "Target Support Files/Pods-TextFields/Pods-TextFields.debug.xcconfig"; sourceTree = "<group>"; };
 		867CB2E2E8C50296DDCE7BBF /* Pods-TextFields.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextFields.release.xcconfig"; path = "Target Support Files/Pods-TextFields/Pods-TextFields.release.xcconfig"; sourceTree = "<group>"; };
+		F40DFBE527DF4BED0046302F /* NoDightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDightsViewController.swift; sourceTree = "<group>"; };
+		F40DFBE827DF4C3A0046302F /* TextFieldMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldMainView.swift; sourceTree = "<group>"; };
+		F40DFBEA27DF5BCD0046302F /* TitleTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextLabel.swift; sourceTree = "<group>"; };
+		F40DFBED27E065390046302F /* OnlyCharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyCharactersViewController.swift; sourceTree = "<group>"; };
+		F40DFBEF27E067C70046302F /* LinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkViewController.swift; sourceTree = "<group>"; };
+		F40DFBF127E086110046302F /* InputLimitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputLimitViewController.swift; sourceTree = "<group>"; };
+		F40DFBF327E097640046302F /* ValidationRulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationRulesViewController.swift; sourceTree = "<group>"; };
+		F40FE0B827E0ED750049B213 /* UITextFieldDeligateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldDeligateExtension.swift; sourceTree = "<group>"; };
+		F40FE0BA27E0EF350049B213 /* HideKeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardExtension.swift; sourceTree = "<group>"; };
 		F42290E027B820E2008D4F79 /* NoDightsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDightsModel.swift; sourceTree = "<group>"; };
 		F42290E827B96837008D4F79 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		F42290EA27B96929008D4F79 /* InputLimitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputLimitModel.swift; sourceTree = "<group>"; };
@@ -48,19 +69,22 @@
 		F42290F227BD5EFB008D4F79 /* OnlyCharModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyCharModel.swift; sourceTree = "<group>"; };
 		F42290F427BEC58F008D4F79 /* OnlyCharTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyCharTextField.swift; sourceTree = "<group>"; };
 		F42290F827C12539008D4F79 /* LinkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkModel.swift; sourceTree = "<group>"; };
-		F42290FA27C145B9008D4F79 /* LinkTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkTextField.swift; sourceTree = "<group>"; };
 		F42290FC27C2B58F008D4F79 /* StrengthLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrengthLevelView.swift; sourceTree = "<group>"; };
 		F42290FE27C346D6008D4F79 /* ValidationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationModel.swift; sourceTree = "<group>"; };
+		F44AA4DE27D8F3BF00448B2F /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		F44AA4E027D8F41D00448B2F /* InitialMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialMainView.swift; sourceTree = "<group>"; };
+		F44AA4E227D8F6D600448B2F /* ControllerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerButton.swift; sourceTree = "<group>"; };
+		F44AA4E627D9173A00448B2F /* MultipleViewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleViewsController.swift; sourceTree = "<group>"; };
 		F488645B27B569B500F69A75 /* TextFields.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextFields.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F488645E27B569B500F69A75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F488646027B569B500F69A75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F488646227B569B500F69A75 /* SingleMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleMainViewController.swift; sourceTree = "<group>"; };
+		F488646227B569B500F69A75 /* GroupMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMainViewController.swift; sourceTree = "<group>"; };
 		F488646527B569B500F69A75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F488646727B569B900F69A75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F488646A27B569B900F69A75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F488646C27B569B900F69A75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F493981427B5785B007A091B /* SingleMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleMainView.swift; sourceTree = "<group>"; };
-		F493981727B57FFE007A091B /* ConstraintConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintConstants.swift; sourceTree = "<group>"; };
+		F493981427B5785B007A091B /* GroupMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMainView.swift; sourceTree = "<group>"; };
+		F493981727B57FFE007A091B /* IndentsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndentsConstants.swift; sourceTree = "<group>"; };
 		F493981A27B58443007A091B /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
 		F493981C27B58938007A091B /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		F493981E27B58A46007A091B /* FontConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontConstants.swift; sourceTree = "<group>"; };
@@ -99,6 +123,102 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F40DFBE427DF4B880046302F /* SeparateTextFiledsModule */ = {
+			isa = PBXGroup;
+			children = (
+				F40DFBEC27E064BE0046302F /* View */,
+				F40DFBE727DF4C070046302F /* Controllers */,
+			);
+			path = SeparateTextFiledsModule;
+			sourceTree = "<group>";
+		};
+		F40DFBE727DF4C070046302F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F40DFBE527DF4BED0046302F /* NoDightsViewController.swift */,
+				F40DFBF127E086110046302F /* InputLimitViewController.swift */,
+				F40DFBED27E065390046302F /* OnlyCharactersViewController.swift */,
+				F40DFBEF27E067C70046302F /* LinkViewController.swift */,
+				F40DFBF327E097640046302F /* ValidationRulesViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F40DFBEC27E064BE0046302F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F40DFBE827DF4C3A0046302F /* TextFieldMainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F40FE0B627E0ED010049B213 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F40FE0B727E0ED2B0049B213 /* UIViewControllerExtensions */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F40FE0B727E0ED2B0049B213 /* UIViewControllerExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				F40FE0B827E0ED750049B213 /* UITextFieldDeligateExtension.swift */,
+				F40FE0BA27E0EF350049B213 /* HideKeyboardExtension.swift */,
+			);
+			path = UIViewControllerExtensions;
+			sourceTree = "<group>";
+		};
+		F410F71C27E464FA00A639AE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F44AA4E627D9173A00448B2F /* MultipleViewsController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F44AA4DA27D8F34A00448B2F /* InitialViewControllerModule */ = {
+			isa = PBXGroup;
+			children = (
+				F44AA4DD27D8F39F00448B2F /* View */,
+				F44AA4DC27D8F39200448B2F /* Controller */,
+			);
+			path = InitialViewControllerModule;
+			sourceTree = "<group>";
+		};
+		F44AA4DC27D8F39200448B2F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F44AA4DE27D8F3BF00448B2F /* InitialViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F44AA4DD27D8F39F00448B2F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F44AA4E427D8F71400448B2F /* Elements Views */,
+				F44AA4E027D8F41D00448B2F /* InitialMainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F44AA4E427D8F71400448B2F /* Elements Views */ = {
+			isa = PBXGroup;
+			children = (
+				F44AA4E227D8F6D600448B2F /* ControllerButton.swift */,
+			);
+			path = "Elements Views";
+			sourceTree = "<group>";
+		};
+		F44AA4E527D916ED00448B2F /* MultipleViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F410F71C27E464FA00A639AE /* Controller */,
+			);
+			path = MultipleViewControllers;
+			sourceTree = "<group>";
+		};
 		F488645227B569B500F69A75 = {
 			isa = PBXGroup;
 			children = (
@@ -121,22 +241,26 @@
 			isa = PBXGroup;
 			children = (
 				F488647827B56C5C00F69A75 /* SuportingFiles */,
-				F488647227B56B2900F69A75 /* SingleViewControllerModule */,
+				F488647327B56B4100F69A75 /* Models */,
+				F493982227B61193007A091B /* Elements Views */,
+				F44AA4DA27D8F34A00448B2F /* InitialViewControllerModule */,
+				F488647227B56B2900F69A75 /* GroupViewControllerModule */,
+				F44AA4E527D916ED00448B2F /* MultipleViewControllers */,
+				F40DFBE427DF4B880046302F /* SeparateTextFiledsModule */,
 			);
 			path = TextFields;
 			sourceTree = "<group>";
 		};
-		F488647227B56B2900F69A75 /* SingleViewControllerModule */ = {
+		F488647227B56B2900F69A75 /* GroupViewControllerModule */ = {
 			isa = PBXGroup;
 			children = (
-				F488647327B56B4100F69A75 /* Model */,
 				F488647427B56B5100F69A75 /* View */,
 				F488647527B56B6900F69A75 /* Controller */,
 			);
-			path = SingleViewControllerModule;
+			path = GroupViewControllerModule;
 			sourceTree = "<group>";
 		};
-		F488647327B56B4100F69A75 /* Model */ = {
+		F488647327B56B4100F69A75 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				F42290E027B820E2008D4F79 /* NoDightsModel.swift */,
@@ -145,14 +269,13 @@
 				F42290F827C12539008D4F79 /* LinkModel.swift */,
 				F42290FE27C346D6008D4F79 /* ValidationModel.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F488647427B56B5100F69A75 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F493982227B61193007A091B /* Elements Views */,
-				F493981427B5785B007A091B /* SingleMainView.swift */,
+				F493981427B5785B007A091B /* GroupMainView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -160,7 +283,7 @@
 		F488647527B56B6900F69A75 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F488646227B569B500F69A75 /* SingleMainViewController.swift */,
+				F488646227B569B500F69A75 /* GroupMainViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -186,6 +309,7 @@
 		F488647827B56C5C00F69A75 /* SuportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				F40FE0B627E0ED010049B213 /* Extensions */,
 				F488647627B56C1900F69A75 /* Application */,
 				F493981627B57FD5007A091B /* Constants */,
 				F493981927B5841A007A091B /* Fonts */,
@@ -200,7 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				F493981C27B58938007A091B /* AppConstants.swift */,
-				F493981727B57FFE007A091B /* ConstraintConstants.swift */,
+				F493981727B57FFE007A091B /* IndentsConstants.swift */,
 				F493981E27B58A46007A091B /* FontConstants.swift */,
 				F493982027B58BBC007A091B /* ColorConstant.swift */,
 			);
@@ -220,12 +344,12 @@
 		F493982227B61193007A091B /* Elements Views */ = {
 			isa = PBXGroup;
 			children = (
+				F40DFBEA27DF5BCD0046302F /* TitleTextLabel.swift */,
 				F493982327B611DE007A091B /* AdjustableTextLabel.swift */,
 				F493982727B6C6EE007A091B /* AdjustableTextField.swift */,
 				F42290EC27B96A06008D4F79 /* CountTextLabel.swift */,
 				F42290F027BA5A21008D4F79 /* InputLimitTextField.swift */,
 				F42290F427BEC58F008D4F79 /* OnlyCharTextField.swift */,
-				F42290FA27C145B9008D4F79 /* LinkTextField.swift */,
 				F42290FC27C2B58F008D4F79 /* StrengthLevelView.swift */,
 			);
 			path = "Elements Views";
@@ -369,24 +493,36 @@
 			files = (
 				F493981D27B58938007A091B /* AppConstants.swift in Sources */,
 				F493981F27B58A46007A091B /* FontConstants.swift in Sources */,
+				F40DFBEE27E065390046302F /* OnlyCharactersViewController.swift in Sources */,
+				F40DFBF227E086110046302F /* InputLimitViewController.swift in Sources */,
 				F42290F127BA5A22008D4F79 /* InputLimitTextField.swift in Sources */,
+				F40DFBEB27DF5BCD0046302F /* TitleTextLabel.swift in Sources */,
 				F42290FD27C2B58F008D4F79 /* StrengthLevelView.swift in Sources */,
+				F40DFBE927DF4C3A0046302F /* TextFieldMainView.swift in Sources */,
+				F40FE0BB27E0EF350049B213 /* HideKeyboardExtension.swift in Sources */,
 				F493982827B6C6EE007A091B /* AdjustableTextField.swift in Sources */,
+				F40DFBF027E067C70046302F /* LinkViewController.swift in Sources */,
 				F493982427B611DE007A091B /* AdjustableTextLabel.swift in Sources */,
+				F40DFBF427E097640046302F /* ValidationRulesViewController.swift in Sources */,
 				F42290F327BD5EFB008D4F79 /* OnlyCharModel.swift in Sources */,
 				F42290F927C12539008D4F79 /* LinkModel.swift in Sources */,
 				F42290FF27C346D6008D4F79 /* ValidationModel.swift in Sources */,
+				F44AA4E327D8F6D600448B2F /* ControllerButton.swift in Sources */,
 				F42290ED27B96A06008D4F79 /* CountTextLabel.swift in Sources */,
 				F42290EB27B96929008D4F79 /* InputLimitModel.swift in Sources */,
-				F493981827B57FFE007A091B /* ConstraintConstants.swift in Sources */,
-				F488646327B569B500F69A75 /* SingleMainViewController.swift in Sources */,
+				F493981827B57FFE007A091B /* IndentsConstants.swift in Sources */,
+				F488646327B569B500F69A75 /* GroupMainViewController.swift in Sources */,
+				F44AA4E727D9173A00448B2F /* MultipleViewsController.swift in Sources */,
 				F42290E127B820E2008D4F79 /* NoDightsModel.swift in Sources */,
 				F42290F527BEC58F008D4F79 /* OnlyCharTextField.swift in Sources */,
-				F493981527B5785B007A091B /* SingleMainView.swift in Sources */,
+				F44AA4DF27D8F3BF00448B2F /* InitialViewController.swift in Sources */,
+				F44AA4E127D8F41D00448B2F /* InitialMainView.swift in Sources */,
+				F493981527B5785B007A091B /* GroupMainView.swift in Sources */,
+				F40FE0B927E0ED750049B213 /* UITextFieldDeligateExtension.swift in Sources */,
 				F488645F27B569B500F69A75 /* AppDelegate.swift in Sources */,
 				F488646127B569B500F69A75 /* SceneDelegate.swift in Sources */,
 				F493982127B58BBC007A091B /* ColorConstant.swift in Sources */,
-				F42290FB27C145B9008D4F79 /* LinkTextField.swift in Sources */,
+				F40DFBE627DF4BED0046302F /* NoDightsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +680,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -573,6 +710,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

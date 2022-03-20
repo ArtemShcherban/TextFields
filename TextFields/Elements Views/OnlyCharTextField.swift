@@ -5,10 +5,9 @@
 //  Created by Artem Shcherban on 17.02.2022.
 //
 
-import Foundation
 import UIKit
 
-class OnlyCharTextField: AdjustableTextField {
+final class OnlyCharTextField: AdjustableTextField {
     
     override init(frame: CGRect) {
         super.init(frame: frame)

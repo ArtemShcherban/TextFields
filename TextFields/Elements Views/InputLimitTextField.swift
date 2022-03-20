@@ -5,12 +5,11 @@
 //  Created by Artem Shcherban on 14.02.2022.
 //
 
-import Foundation
 import UIKit
 
-class InputLimitTextField: AdjustableTextField {
+final class InputLimitTextField: AdjustableTextField {
     
-    let limit = AppConstants.maxNumberOfCharacters
+    private let limit = AppConstants.maxNumberOfCharacters
     
     override init(frame: CGRect) {
         super.init(frame: frame)

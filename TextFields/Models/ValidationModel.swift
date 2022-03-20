@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ValidationModel {
+final class ValidationModel {
     private static let capitalletters = CharacterSet(charactersIn: AppConstants.alphabetletters)
     private static let letters = CharacterSet(charactersIn: AppConstants.alphabetletters.lowercased())
     private static let numbers = CharacterSet(charactersIn: AppConstants.setOfNumbers)

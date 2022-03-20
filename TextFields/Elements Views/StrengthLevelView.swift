@@ -5,12 +5,11 @@
 //  Created by Artem Shcherban on 20.02.2022.
 //
 
-import Foundation
 import UIKit
 
 final class StrengthLevelView: UIView {
     
-    let gradientLayer = CAGradientLayer()
+    private lazy var gradientLayer = CAGradientLayer()
     
     override init(frame: CGRect) {
         super.init(frame: frame)

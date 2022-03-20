@@ -38,6 +38,7 @@ class AdjustableTextField: UITextField {
         layer.borderWidth = 0.7
         layer.cornerRadius = 10
         clipsToBounds = true
+        NSLayoutConstraint.activate( [heightAnchor.constraint(equalToConstant: 36)])
         update()
     }
 }
