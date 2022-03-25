@@ -13,9 +13,12 @@ final class InputLimitViewController: UIViewController {
     private lazy var textFieldMainView = TextFieldMainView()
     private lazy var inputLimitModel = InputLimitModel()
     
+    override func loadView() {
+        view = textFieldMainView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view = textFieldMainView
         textFieldMainView.createTextFieldView(reuseIdentifier: Self.reuseIdentifier)
         setupHideKeyboardTapGesture()
         configureMainTextField()
@@ -26,7 +29,7 @@ final class InputLimitViewController: UIViewController {
         textFieldMainView.mainTextField.addTarget(self, action: #selector(textFieldDidChanged), for: .editingChanged)
     }
     
-    @objc func textFieldDidChanged(_ sender: InputLimitTextField) {
+    @objc private func textFieldDidChanged(_ sender: InputLimitTextField) {
         textFieldMainView.countTextLabel.text = inputLimitModel.characterCounter(sender.text ?? "")
         sender.setColors()
         textFieldMainView.countTextLabel.setTextColor()

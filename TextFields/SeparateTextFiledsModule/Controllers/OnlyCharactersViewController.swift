@@ -13,9 +13,12 @@ final class OnlyCharactersViewController: UIViewController {
     private lazy var textFieldMainView = TextFieldMainView()
     private lazy var onlyCharModel = OnlyCharModel()
     
+    override func loadView() {
+        view = textFieldMainView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view = textFieldMainView
         textFieldMainView.createTextFieldView(reuseIdentifier: Self.reuseIdentifier)
         setupHideKeyboardTapGesture()
         configureMainTextField()
@@ -26,7 +29,7 @@ final class OnlyCharactersViewController: UIViewController {
         textFieldMainView.mainTextField.addTarget(self, action: #selector(textFieldDidChanged), for: .editingChanged)
     }
     
-    @objc func textFieldDidChanged(_ sender: OnlyCharTextField) {
+    @objc private func textFieldDidChanged(_ sender: OnlyCharTextField) {
         sender.text = sender.text?.uppercased()
         sender.text = onlyCharModel.maskApplication(sender.text ?? "")
     }

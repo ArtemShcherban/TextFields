@@ -9,14 +9,15 @@ import UIKit
 
 final class InitialMainView: UIView {
     
-    private lazy var singleViewButton = ControllerButton()
-    private lazy var multipleViewsButton = ControllerButton()
-    lazy var buttonsArray = [singleViewButton, multipleViewsButton]
+    lazy var singleViewButton = ControllerButton()
+    lazy var multipleViewsButton = ControllerButton()
+    
+    weak var delegate: InitialMainViewDelegate?
     
     func createInitialMainView() {
+        backgroundColor = .white
         addSubviews()
         setButtonTitles()
-        setButtonTags()
         setConstraints()
     }
     
@@ -28,11 +29,6 @@ final class InitialMainView: UIView {
     private func setButtonTitles() {
         singleViewButton.setTitle(AppConstants.singleViewButtonTitle, for: .normal)
         multipleViewsButton.setTitle(AppConstants.multipleViewsButtonTitle, for: .normal)
-    }
-    
-    private func setButtonTags() {
-        singleViewButton.tag = 1
-        multipleViewsButton.tag = 2
     }
     
     private func setConstraints() {
@@ -48,4 +44,11 @@ final class InitialMainView: UIView {
                                                                                     Indents.right.rawValue),
                                      multipleViewsButton.topAnchor.constraint(equalTo: self.centerYAnchor, constant: 10)])
     }
+}
+
+protocol InitialMainViewDelegate: AnyObject {
+    
+    func singleViewButtonTapped()
+    func multipleViewsButtonTapped()
+    
 }

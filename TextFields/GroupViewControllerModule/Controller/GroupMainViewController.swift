@@ -19,7 +19,6 @@ final class GroupMainViewController: UIViewController {
     private lazy var timer = Timer()
     
     private var groupMainView: GroupMainView? {
-        
         view as? GroupMainView
     }
     
@@ -46,7 +45,7 @@ final class GroupMainViewController: UIViewController {
         }
     }
     
-    @objc func textFieldDidChanged(sender: AdjustableTextField) {
+    @objc private func textFieldDidChanged(sender: AdjustableTextField) {
         switch sender.tag {
         case 0:
             sender.text = noDightsModel.digitsExclusion(sender.text ?? "")

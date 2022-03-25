@@ -14,9 +14,12 @@ final class NoDightsViewController: UIViewController {
     private lazy var textFieldMainView = TextFieldMainView()
     private lazy var noDightsModel = NoDightsModel()
     
+    override func loadView() {
+        view = textFieldMainView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view = textFieldMainView
         textFieldMainView.createTextFieldView(reuseIdentifier: Self.reuseIdentifier)
         setupHideKeyboardTapGesture()
         configureMainTextField()
@@ -27,7 +30,7 @@ final class NoDightsViewController: UIViewController {
         textFieldMainView.mainTextField.addTarget(self, action: #selector(textFieldDidChanged), for: .editingChanged)
     }
     
-    @objc func textFieldDidChanged(_ sender: AdjustableTextField) {
+    @objc private func textFieldDidChanged(_ sender: AdjustableTextField) {
         sender.text = noDightsModel.digitsExclusion(sender.text ?? "")
     }
 }

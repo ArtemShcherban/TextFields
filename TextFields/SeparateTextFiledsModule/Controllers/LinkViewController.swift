@@ -15,9 +15,12 @@ final class LinkViewController: UIViewController {
     private lazy var linkModel = LinkModel()
     private lazy var timer = Timer()
     
+    override func loadView() {
+        view = textFieldMainView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view = textFieldMainView
         textFieldMainView.createTextFieldView(reuseIdentifier: Self.reuseIdentifier)
         setupHideKeyboardTapGesture()
         configureMainTextField()
@@ -29,7 +32,7 @@ final class LinkViewController: UIViewController {
         textFieldMainView.mainTextField.addTarget(self, action: #selector(textFieldDidChanged), for: .editingChanged)
     }
     
-    @objc func textFieldDidChanged(_ sender: AdjustableTextField) {
+    @objc private func textFieldDidChanged(_ sender: AdjustableTextField) {
         timer.invalidate()
         sender.text = sender.text?.lowercased()
         linkModel.checkStringIsLink(sender.text ?? "") ? openSafariVC(sender.text ?? "") : nil

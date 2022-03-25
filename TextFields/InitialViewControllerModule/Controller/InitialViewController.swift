@@ -7,11 +7,16 @@
 
 import UIKit
 
-class InitialViewController: UIViewController {
+final class InitialViewController: UIViewController, InitialMainViewDelegate {
     
-    private var initialMainView: InitialMainView? {
-        
-        view as? InitialMainView
+    private lazy var initialMainView: InitialMainView? = {
+        let view = InitialMainView()
+        view.delegate = self
+        return view
+    }()
+    
+    override func loadView() {
+        view = initialMainView
     }
     
     override func viewDidLoad() {
@@ -21,19 +26,20 @@ class InitialViewController: UIViewController {
     }
     
     func addButtonTarget() {
-        initialMainView?.buttonsArray.forEach({ $0.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside) })
+        initialMainView?.singleViewButton.addTarget(self, action: #selector(singleViewButtonTapped), for: .touchUpInside)
+        initialMainView?.multipleViewsButton.addTarget(self, action: #selector(multipleViewsButtonTapped), for: .touchUpInside)
     }
     
-    @objc func buttonPressed(sender: ControllerButton) {
+    @objc func singleViewButtonTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController: UIViewController
-        
-        if sender.tag == 1 {
-            viewController = storyboard.instantiateViewController(withIdentifier: GroupMainViewController.reuseIdentifier)
-        } else {
-            viewController = MultipleViewsController()
-            //            viewController = storyboard.instantiateViewController(withIdentifier: MultipleViewsController.reuseIdentifier)
-        }
+        var viewController = UIViewController()
+        viewController = storyboard.instantiateViewController(withIdentifier: GroupMainViewController.reuseIdentifier)
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    @objc func multipleViewsButtonTapped() {
+        var viewController = UIViewController()
+        viewController = MultipleViewsController()
         navigationController?.pushViewController(viewController, animated: true)
     }
 }

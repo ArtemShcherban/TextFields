@@ -10,9 +10,9 @@ import UIKit
 final class TextFieldMainView: UIView {
     
     private let title = TitleTextLabel()
-    lazy var mainTextField = AdjustableTextField()
-    lazy var countTextLabel = CountTextLabel()
-    lazy var strengthLevelView = StrengthLevelView()
+    var mainTextField = AdjustableTextField()
+    var countTextLabel = CountTextLabel()
+    var strengthLevelView = StrengthLevelView()
     private lazy var eightCharactersRule = AdjustableTextLabel()
     private lazy var oneDightRule = AdjustableTextLabel()
     private lazy var oneLowercaseRule = AdjustableTextLabel()
@@ -22,8 +22,8 @@ final class TextFieldMainView: UIView {
     func createTextFieldView(reuseIdentifier: String) {
         mainTextField = chooseTextField(reuseIdentifier: reuseIdentifier)
         addSubviews()
-        setTitle()
-        setPlaceholder()
+        title.text = AppConstants.subtitleNamesArray[mainTextField.tag]
+        mainTextField.placeholder = AppConstants.textFieldPlaceholdersArray[mainTextField.tag]
         setTitleConstraints()
         setMainTextFieldConstraints()
         if mainTextField.tag == 1 {
@@ -68,14 +68,6 @@ final class TextFieldMainView: UIView {
         return textField
     }
     
-    private func setTitle() {
-        title.text = AppConstants.subtitleNamesArray[mainTextField.tag]
-    }
-    
-    private func setPlaceholder() {
-        mainTextField.placeholder = AppConstants.textFieldPlaceholdersArray[mainTextField.tag]
-    }
-    
     private func addInputLimitExtraViews() {
         self.addSubview(countTextLabel)
         setCountTextLabelConstarints()
@@ -94,15 +86,13 @@ final class TextFieldMainView: UIView {
     }
     
     private func setRuleTitles() {
-        var index = 0
-        ruleTextLabelsArray.forEach { ruleTitle in
-            ruleTitle.text = AppConstants.ruleTitlesArray[index]
-            index += 1
+        for (index, label) in ruleTextLabelsArray.enumerated() {
+            label.text = AppConstants.ruleTitlesArray[index]
         }
     }
     
     private func addRuleTextLabelSubviews() {
-        ruleTextLabelsArray.forEach { self.addSubview($0)}
+        ruleTextLabelsArray.forEach { self.addSubview($0) }
     }
     
     private func setMainTextFieldConstraints() {

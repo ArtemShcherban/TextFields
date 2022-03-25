@@ -13,9 +13,12 @@ final class ValidationRulesViewController: UIViewController {
     private lazy var textFieldMainView = TextFieldMainView()
     private lazy var validationModel = ValidationModel()
     
+    override func loadView() {
+        view = textFieldMainView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view = textFieldMainView
         textFieldMainView.createTextFieldView(reuseIdentifier: ValidationRulesViewController.reuseIdentifier)
         setupHideKeyboardTapGesture()
         configureMainTextField()
@@ -26,15 +29,14 @@ final class ValidationRulesViewController: UIViewController {
         textFieldMainView.mainTextField.addTarget(self, action: #selector(textFieldDidChanged), for: .editingChanged)
     }
     
-    @objc func textFieldDidChanged(_ sender: AdjustableTextField) {
-        let result: (rulesArray: [Bool], strength: Int) = validationModel.checkPassword(sender.text ?? "")
+    @objc private func textFieldDidChanged(_ sender: AdjustableTextField) {
+        let result: (rules: [Bool], strength: Int) = validationModel.checkPassword(sender.text ?? "")
         textFieldMainView.strengthLevelView.setStrengthLevelViewColor(result.strength)
-        setRuleTextLabelColor(result.rulesArray)
+        setRuleTextLabelColor(result.rules)
     }
     
-    private func setRuleTextLabelColor(_ rulesArray: [Bool]) {
-        var index = 0
-        rulesArray.forEach { rule in
+    private func setRuleTextLabelColor(_ rules: [Bool]) {
+        for (index, rule) in rules.enumerated() {
             let textLabel = textFieldMainView.ruleTextLabelsArray[index]
             switch rule {
             case true:
@@ -44,7 +46,6 @@ final class ValidationRulesViewController: UIViewController {
                 textLabel.isSatisfied = false
                 textLabel.text = textLabel.text?.replacingOccurrences(of: "+", with: "-")
             }
-            index += 1
         }
     }
 }

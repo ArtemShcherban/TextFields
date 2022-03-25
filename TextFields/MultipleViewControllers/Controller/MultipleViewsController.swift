@@ -10,11 +10,13 @@ import UIKit
 final class MultipleViewsController: UITabBarController {
     static let reuseIdentifier = String(describing: MultipleViewsController.self)
     
-    private lazy var viewController1 = UINavigationController.init(rootViewController: NoDightsViewController())
-    private lazy var viewController2 = UINavigationController.init(rootViewController: InputLimitViewController())
-    private lazy var viewController3 = UINavigationController.init(rootViewController: OnlyCharactersViewController())
-    private lazy var viewController4 = UINavigationController.init(rootViewController: LinkViewController())
-    private lazy var viewController5 = UINavigationController.init(rootViewController: ValidationRulesViewController())
+    private lazy var noDightsViewController = UINavigationController.init(rootViewController: NoDightsViewController())
+    private lazy var inputLimitViewController = UINavigationController.init(rootViewController: InputLimitViewController())
+    private lazy var onlyCharactersViewController = UINavigationController.init(rootViewController:
+                                                                                    OnlyCharactersViewController())
+    private lazy var linkViewController = UINavigationController.init(rootViewController: LinkViewController())
+    private lazy var validationRulesViewController = UINavigationController.init(rootViewController:
+                                                                                    ValidationRulesViewController())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +29,12 @@ final class MultipleViewsController: UITabBarController {
     }
     
     private func tabBarConfigure() {
-        self.setViewControllers([viewController1, viewController2,
-                                 viewController3, viewController4,
-                                 viewController5], animated: false)
-        self.tabBar.backgroundColor = ColorConstants.dirtyWhiteColor
+        self.setViewControllers([noDightsViewController,
+                                 inputLimitViewController,
+                                 onlyCharactersViewController,
+                                 linkViewController,
+                                 validationRulesViewController], animated: false)
+        self.tabBar.backgroundColor = ColorConstants.tabBarColor
         self.tabBar.unselectedItemTintColor = ColorConstants.graphiteColor
     }
     
