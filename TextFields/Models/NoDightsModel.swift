@@ -7,7 +7,7 @@
 
 import Foundation
 
-class NoDightsModel {
+final class NoDightsModel {
     
     func digitsExclusion(_ string: String) -> String {
         

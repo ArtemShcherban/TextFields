@@ -7,4 +7,5 @@ target 'TextFields' do
 
   # Pods for TextFields
   pod 'SwiftLint'
+  pod 'IQKeyboardManagerSwift'
 end

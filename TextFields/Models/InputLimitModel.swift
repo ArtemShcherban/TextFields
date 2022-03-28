@@ -7,7 +7,7 @@
 
 import Foundation
 
-class InputLimitModel {
+final class InputLimitModel {
     
     func characterCounter(_ string: String) -> String {
         

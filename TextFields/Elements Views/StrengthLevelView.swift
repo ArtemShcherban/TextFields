@@ -5,12 +5,11 @@
 //  Created by Artem Shcherban on 20.02.2022.
 //
 
-import Foundation
 import UIKit
 
 final class StrengthLevelView: UIView {
     
-    let gradientLayer = CAGradientLayer()
+    private lazy var gradientLayer = CAGradientLayer()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,20 +21,13 @@ final class StrengthLevelView: UIView {
         configure()
     }
     
-    private func configure() {
-        NSLayoutConstraint.activate([heightAnchor.constraint(equalToConstant: 8)])
-        setStrengthLevelViewColor(0)
-        layer.addSublayer(gradientLayer)
-    }
-    
     func setStrengthLevelViewColor(_ passwordStrength: Int) {
         gradientLayer.frame = bounds
         gradientLayer.locations = [NSNumber(value: 0.0), NSNumber(value: 0.5), NSNumber(value: 0.5), NSNumber(value: 1.0)]
-
         setGradientColor(passwordStrength)
     }
     
-    func setGradientColor(_ passwordStrength: Int) {
+    private func setGradientColor(_ passwordStrength: Int) {
         switch passwordStrength {
         case 1:
             gradientLayer.colors = [UIColor.red.cgColor, UIColor.red.cgColor, UIColor.clear.cgColor, UIColor.clear.cgColor]
@@ -58,5 +50,11 @@ final class StrengthLevelView: UIView {
             gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
             gradientLayer.endPoint = CGPoint(x: 0.0, y: 0.0)
         }
+    }
+    
+    private func configure() {
+        NSLayoutConstraint.activate([heightAnchor.constraint(equalToConstant: 8)])
+        setStrengthLevelViewColor(0)
+        layer.addSublayer(gradientLayer)
     }
 }

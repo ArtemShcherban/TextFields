@@ -7,13 +7,10 @@
 
 import UIKit
 
-final class SingleMainView: UIView {
+final class GroupMainView: UIView {
     
-    private lazy var titleTextLabel: UILabel = {
-        let tempTitleTextLabel = UILabel()
-        tempTitleTextLabel.textColor = ColorConstants.graphiteColor
-        tempTitleTextLabel.font = UIFont(name: FontConstants.rubikMedium.rawValue, size: 34)
-        tempTitleTextLabel.textAlignment = .center
+    private lazy var titleTextLabel: TitleTextLabel = {
+        let tempTitleTextLabel = TitleTextLabel()
         tempTitleTextLabel.text = AppConstants.appTitleConstant
         return tempTitleTextLabel
     }()
@@ -41,14 +38,14 @@ final class SingleMainView: UIView {
     
     // Strength Level Views
     lazy var strengthLevelView = StrengthLevelView()
-
+    
     // Rule Text Labels
     private lazy var eightCharactersRule = AdjustableTextLabel()
     private lazy var oneDightRule = AdjustableTextLabel()
     private lazy var oneLowercaseRule = AdjustableTextLabel()
     private lazy var oneUppercaseRule = AdjustableTextLabel()
     lazy var ruleTextLabelsArray = [eightCharactersRule, oneDightRule, oneLowercaseRule, oneUppercaseRule]
-
+    
     func createSingleMainView() {
         addAllSubviews()
         setSubtitlesNames()
@@ -147,7 +144,8 @@ final class SingleMainView: UIView {
             textLabel.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([textLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: topAnchor),
                                          textLabel.heightAnchor.constraint(equalToConstant: 20),
-                                         textLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Indents.left.rawValue),
+                                         textLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant:
+                                                                                Indents.left.rawValue),
                                          textLabel.widthAnchor.constraint(equalToConstant: 100)])
             topAnchor += 90
         }
@@ -158,9 +156,10 @@ final class SingleMainView: UIView {
         textFieldsArray.forEach { textField in
             textField.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([textField.topAnchor.constraint(equalTo: self.topAnchor, constant: topAnchor),
-                                         textField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Indents.left.rawValue),
-                                         textField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: Indents.right.rawValue),
-                                         textField.heightAnchor.constraint(equalToConstant: 36)])
+                                         textField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant:
+                                                                                Indents.left.rawValue),
+                                         textField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant:
+                                                                                Indents.right.rawValue)])
             topAnchor += 90
         }
     }
@@ -174,18 +173,23 @@ final class SingleMainView: UIView {
     
     private func setStrengthLevelViewConstraints() {
         strengthLevelView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([strengthLevelView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Indents.left.rawValue),
-                                     strengthLevelView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: Indents.right.rawValue),
-                                     strengthLevelView.bottomAnchor.constraint(equalTo: validationTextField.bottomAnchor, constant: 0)])
+        NSLayoutConstraint.activate([strengthLevelView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant:
+                                                                                    Indents.left.rawValue),
+                                     strengthLevelView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant:
+                                                                                    Indents.right.rawValue),
+                                     strengthLevelView.bottomAnchor.constraint(equalTo: validationTextField.bottomAnchor)])
     }
     
     private func setRuleTitleConstraints() {
         var topAnchor: CGFloat = 8
         ruleTextLabelsArray.forEach { ruleTitle in
             ruleTitle.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([ruleTitle.topAnchor.constraint(equalTo: validationTextField.bottomAnchor, constant: topAnchor),
-                                         ruleTitle.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Indents.left.rawValue),
-                                         ruleTitle.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: Indents.right.rawValue),
+            NSLayoutConstraint.activate([ruleTitle.topAnchor.constraint(equalTo: validationTextField.bottomAnchor, constant:
+                                                                            topAnchor),
+                                         ruleTitle.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant:
+                                                                                Indents.left.rawValue),
+                                         ruleTitle.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant:
+                                                                                Indents.right.rawValue),
                                          ruleTitle.heightAnchor.constraint(equalToConstant: 20)])
             topAnchor += 20
         }

@@ -5,7 +5,6 @@
 //  Created by Artem Shcherban on 13.02.2022.
 //
 
-import Foundation
 import UIKit
 
 final class CountTextLabel: UILabel {
