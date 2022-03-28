@@ -29,13 +29,6 @@ final class LinkViewController: UIViewController {
     private func configureMainTextField() {
         textFieldMainView.mainTextField.autocorrectionType = .no
         textFieldMainView.mainTextField.delegate = self
-        textFieldMainView.mainTextField.addTarget(self, action: #selector(textFieldDidChanged), for: .editingChanged)
-    }
-    
-    @objc private func textFieldDidChanged(_ sender: AdjustableTextField) {
-        timer.invalidate()
-        sender.text = sender.text?.lowercased()
-        linkModel.checkStringIsLink(sender.text ?? "") ? openSafariVC(sender.text ?? "") : nil
     }
     
     private func openSafariVC(_ string: String) {
@@ -45,5 +38,21 @@ final class LinkViewController: UIViewController {
                 self.present(safariViewController, animated: true)
             }
         }
+    }
+}
+
+extension LinkViewController {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        timer.invalidate()
+        textField.text = textField.text?.lowercased()
+        linkModel.checkStringIsLink(string) ? openSafariVC(string) : nil
+        return true
+    }
+    
+    override func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        linkModel.checkStringIsLink(textField.text ?? "") ? openSafariVC(textField.text ?? "") : nil
+        textField.resignFirstResponder()
+        return true
     }
 }

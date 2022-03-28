@@ -18,6 +18,7 @@ final class InitialMainView: UIView {
         backgroundColor = .white
         addSubviews()
         setButtonTitles()
+        addButtonTarget()
         setConstraints()
     }
     
@@ -29,6 +30,11 @@ final class InitialMainView: UIView {
     private func setButtonTitles() {
         singleViewButton.setTitle(AppConstants.singleViewButtonTitle, for: .normal)
         multipleViewsButton.setTitle(AppConstants.multipleViewsButtonTitle, for: .normal)
+    }
+    
+    func addButtonTarget() {
+        singleViewButton.addTarget(delegate, action: #selector(delegate?.singleViewButtonTapped), for: .touchUpInside)
+        multipleViewsButton.addTarget(delegate, action: #selector(delegate?.multipleViewsButtonTapped), for: .touchUpInside)
     }
     
     private func setConstraints() {
@@ -46,7 +52,7 @@ final class InitialMainView: UIView {
     }
 }
 
-protocol InitialMainViewDelegate: AnyObject {
+@objc protocol InitialMainViewDelegate: AnyObject {
     
     func singleViewButtonTapped()
     func multipleViewsButtonTapped()

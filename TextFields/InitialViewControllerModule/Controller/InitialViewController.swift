@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class InitialViewController: UIViewController, InitialMainViewDelegate {
+final class InitialViewController: UIViewController {
     
     private lazy var initialMainView: InitialMainView? = {
         let view = InitialMainView()
@@ -22,22 +22,19 @@ final class InitialViewController: UIViewController, InitialMainViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialMainView?.createInitialMainView()
-        addButtonTarget()
     }
+}
+
+extension InitialViewController: InitialMainViewDelegate {
     
-    func addButtonTarget() {
-        initialMainView?.singleViewButton.addTarget(self, action: #selector(singleViewButtonTapped), for: .touchUpInside)
-        initialMainView?.multipleViewsButton.addTarget(self, action: #selector(multipleViewsButtonTapped), for: .touchUpInside)
-    }
-    
-    @objc func singleViewButtonTapped() {
+    func singleViewButtonTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         var viewController = UIViewController()
         viewController = storyboard.instantiateViewController(withIdentifier: GroupMainViewController.reuseIdentifier)
         navigationController?.pushViewController(viewController, animated: true)
     }
     
-    @objc func multipleViewsButtonTapped() {
+    func multipleViewsButtonTapped() {
         var viewController = UIViewController()
         viewController = MultipleViewsController()
         navigationController?.pushViewController(viewController, animated: true)
