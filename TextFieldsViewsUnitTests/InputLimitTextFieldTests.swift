@@ -8,7 +8,7 @@
 import XCTest
 @testable import TextFields
 
-class InputLimitTextFieldTests: XCTestCase {
+final class InputLimitTextFieldTests: XCTestCase {
     private var textField: InputLimitTextField!
     private var limit = AppConstants.maxNumberOfCharacters
     

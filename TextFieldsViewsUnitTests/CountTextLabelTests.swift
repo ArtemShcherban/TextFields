@@ -7,7 +7,8 @@
 
 import XCTest
 @testable import TextFields
-class CountTextLabelTests: XCTestCase {
+
+final class CountTextLabelTests: XCTestCase {
     
     private var countTextLabel: CountTextLabel!
     
