@@ -8,8 +8,6 @@
 import UIKit
 
 final class CountTextLabel: UILabel {
-    private let activeColor = UIColor.red
-    private let inactiveColor = ColorConstants.graphiteColor
     
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -51,6 +51,7 @@ final class GroupMainView: UIView {
         setSubtitlesNames()
         setTextFieldTags()
         setTextFieldPlaceolders()
+        setupAccessibilityIds()
         setAllConstraints()
         linkTextFieldConfigure()
         validationTextFieldConfigure()
@@ -88,26 +89,26 @@ final class GroupMainView: UIView {
     }
     
     private func setSubtitlesNames() {
-        var index = 0
-        textlabelsArray.forEach { textLabel in
+        for (index, textLabel) in textlabelsArray.enumerated() {
             textLabel.text = AppConstants.subtitleNamesArray[index]
-            index += 1
         }
     }
     
     private func setTextFieldTags() {
-        var index = 0
-        textFieldsArray.forEach { textField in
+        for (index, textField) in textFieldsArray.enumerated() {
             textField.tag = index
-            index += 1
         }
     }
     
     private func setTextFieldPlaceolders() {
-        var index = 0
-        textFieldsArray.forEach { textField in
+        for (index, textField) in textFieldsArray.enumerated() {
             textField.placeholder = AppConstants.textFieldPlaceholdersArray[index]
-            index += 1
+        }
+    }
+    
+    private func setupAccessibilityIds() {
+        for (index, textField) in textFieldsArray.enumerated() {
+            textField.accessibilityIdentifier = AppConstants.subtitleNamesArray[index]
         }
     }
     

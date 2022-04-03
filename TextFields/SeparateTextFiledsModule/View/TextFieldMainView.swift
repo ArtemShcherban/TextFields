@@ -23,7 +23,7 @@ final class TextFieldMainView: UIView {
         mainTextField = chooseTextField(reuseIdentifier: reuseIdentifier)
         addSubviews()
         title.text = AppConstants.subtitleNamesArray[mainTextField.tag]
-        mainTextField.placeholder = AppConstants.textFieldPlaceholdersArray[mainTextField.tag]
+        mainTextFieldConfigure()
         setTitleConstraints()
         setMainTextFieldConstraints()
         if mainTextField.tag == 1 {
@@ -66,6 +66,11 @@ final class TextFieldMainView: UIView {
             break
         }
         return textField
+    }
+    
+    private func mainTextFieldConfigure() {
+        mainTextField.placeholder = AppConstants.textFieldPlaceholdersArray[mainTextField.tag]
+        mainTextField.accessibilityIdentifier = AppConstants.subtitleNamesArray[mainTextField.tag]
     }
     
     private func addInputLimitExtraViews() {
