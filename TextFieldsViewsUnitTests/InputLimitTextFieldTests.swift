@@ -10,7 +10,6 @@ import XCTest
 
 final class InputLimitTextFieldTests: XCTestCase {
     private var textField: InputLimitTextField!
-    private var limit = AppConstants.maxNumberOfCharacters
     
     override func setUpWithError() throws {
         try super.setUpWithError()
@@ -23,8 +22,8 @@ final class InputLimitTextFieldTests: XCTestCase {
     }
     
     private func getStringColors(_ string: String) -> (UIColor?, UIColor?) {
-        let startRange = NSRange(location: 0, length: limit)
-        let endRange = NSRange(location: limit, length: (textField.text?.count ?? 0) - limit)
+        let startRange = NSRange(location: 0, length: textField.limit)
+        let endRange = NSRange(location: textField.limit, length: (textField.text?.count ?? 0) - textField.limit)
         let beginning = textField.attributedText?.attributedSubstring(from: startRange)
         let ending = textField.attributedText?.attributedSubstring(from: endRange)
         

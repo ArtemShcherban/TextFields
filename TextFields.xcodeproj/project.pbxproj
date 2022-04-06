@@ -51,7 +51,6 @@
 		F493982627B61456007A091B /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F493982527B61456007A091B /* Rubik-Regular.ttf */; };
 		F493982827B6C6EE007A091B /* AdjustableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493982727B6C6EE007A091B /* AdjustableTextField.swift */; };
 		F4A42F0D27F6EEBD0053E0AD /* InitialViewButtonsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A42F0C27F6EEBD0053E0AD /* InitialViewButtonsUITests.swift */; };
-		F4A42F0F27F6F4630053E0AD /* MultipleViewsTabBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A42F0E27F6F4630053E0AD /* MultipleViewsTabBarUITests.swift */; };
 		F4CA909127F33F84002C978A /* OnlyCharModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA909027F33F84002C978A /* OnlyCharModelTests.swift */; };
 		F4CA90A527F4584E002C978A /* ValidationModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA90A427F4584E002C978A /* ValidationModelTests.swift */; };
 /* End PBXBuildFile section */
@@ -130,7 +129,6 @@
 		F493982527B61456007A091B /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		F493982727B6C6EE007A091B /* AdjustableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustableTextField.swift; sourceTree = "<group>"; };
 		F4A42F0C27F6EEBD0053E0AD /* InitialViewButtonsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewButtonsUITests.swift; sourceTree = "<group>"; };
-		F4A42F0E27F6F4630053E0AD /* MultipleViewsTabBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleViewsTabBarUITests.swift; sourceTree = "<group>"; };
 		F4CA908E27F33F84002C978A /* TextFieldsModelUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextFieldsModelUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CA909027F33F84002C978A /* OnlyCharModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyCharModelTests.swift; sourceTree = "<group>"; };
 		F4CA90A427F4584E002C978A /* ValidationModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationModelTests.swift; sourceTree = "<group>"; };
@@ -449,7 +447,6 @@
 			isa = PBXGroup;
 			children = (
 				F4A42F0C27F6EEBD0053E0AD /* InitialViewButtonsUITests.swift */,
-				F4A42F0E27F6F4630053E0AD /* MultipleViewsTabBarUITests.swift */,
 			);
 			path = TextFieldsUITests;
 			sourceTree = "<group>";
@@ -739,7 +736,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4A42F0F27F6F4630053E0AD /* MultipleViewsTabBarUITests.swift in Sources */,
 				F4A42F0D27F6EEBD0053E0AD /* InitialViewButtonsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -64,7 +64,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F46B6ADB27F76D2200DEC567"
-               BuildableName = "TextFieldsUnitTests.xctest"
+               BuildableName = "TextFieldsViewsUnitTests.xctest"
                BlueprintName = "TextFieldsViewsUnitTests"
                ReferencedContainer = "container:TextFields.xcodeproj">
             </BuildableReference>

@@ -22,19 +22,21 @@ final class CountTextLabelTests: XCTestCase {
         try super.tearDownWithError()
     }
     
-    func testSetColorForNegativeValue() {
+    func testUpdateTextColorForNegativeValue() {
         countTextLabel.text = "-5"
-        
-        countTextLabel.setTextColor()
-        
+    
         XCTAssertEqual(countTextLabel.textColor, UIColor.red)
     }
     
-    func testSetColorForPositiveValue() {
+    func testUpdateTextColorPositiveValue() {
         countTextLabel.text = "5"
         
-        countTextLabel.setTextColor()
-        
+        XCTAssertEqual(countTextLabel.textColor, ColorConstants.graphiteColor)
+    }
+    
+    func testUpdateTextColorZeroValue() {
+        countTextLabel.text = "0"
+    
         XCTAssertEqual(countTextLabel.textColor, ColorConstants.graphiteColor)
     }
 }

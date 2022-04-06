@@ -21,13 +21,16 @@ final class LinkModelTests: XCTestCase {
         try super.tearDownWithError()
     }
     
-    func testLinkModel() {
+    func testWithCorrectLink() {
         XCTAssertTrue(modelUnderTest.checkStringIsLink("http://google.ua"))
         XCTAssertTrue(modelUnderTest.checkStringIsLink("https://google.ua"))
         XCTAssertTrue(modelUnderTest.checkStringIsLink("http://google.com"))
         XCTAssertTrue(modelUnderTest.checkStringIsLink("https://google.com"))
         XCTAssertTrue(modelUnderTest.checkStringIsLink("http://google.com.ua"))
         XCTAssertTrue(modelUnderTest.checkStringIsLink("https://google.com.ua"))
+    }
+    
+    func testWithIncorrectLink() {
         XCTAssertFalse(modelUnderTest.checkStringIsLink("https://google"))
         XCTAssertFalse(modelUnderTest.checkStringIsLink("http://google"))
         XCTAssertFalse(modelUnderTest.checkStringIsLink("www.google.com"))

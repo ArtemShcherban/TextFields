@@ -9,6 +9,14 @@ import UIKit
 
 final class CountTextLabel: UILabel {
     
+    override var text: String? {
+            didSet {
+                if oldValue != text {
+                    updateTextColor()
+                }
+            }
+        }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -27,7 +35,7 @@ final class CountTextLabel: UILabel {
                                                    attributes: [NSAttributedString.Key.kern: -0.41])
     }
     
-    func setTextColor() {
+    func updateTextColor() {
         if Int(text ?? "") ?? 0 < 0 {
             textColor = .red
         } else {

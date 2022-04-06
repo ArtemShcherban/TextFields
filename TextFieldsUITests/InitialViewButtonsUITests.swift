@@ -25,7 +25,7 @@ final class InitialViewButtonsUITests: XCTestCase {
         app.launch()
     }
     
-    func testSingleViewButtonGroupMainViewControllerShouldAppearOnTap() {
+    func testSingleViewControllerAppearOnTap() {
         singleViewButton.tap()
         XCTAssertTrue(app.textFields[noDightsTextField.identifier].exists)
         XCTAssertTrue(app.textFields[inputLimitTextField.identifier].exists)
@@ -34,7 +34,7 @@ final class InitialViewButtonsUITests: XCTestCase {
         XCTAssertTrue(app.secureTextFields[validationTextField.identifier].exists)
     }
     
-    func testMultipleViewsButtonMultipleViewsControllerShouldAppearOnTap() {
+    func testMultipleViewsControllerAppearOnTap() {
         let expectedTabBar = "MultipleViewsTabBar"
         
         multipleViewsButton.tap()

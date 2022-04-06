@@ -52,7 +52,6 @@ final class GroupMainViewController: UIViewController {
         case 1:
             groupMainView?.countTextLabel.text = inputLimitModel.characterCounter(sender.text ?? "")
             groupMainView?.inputLimitTextField.setColors()
-            groupMainView?.countTextLabel.setTextColor()
         case 2:
             sender.text = sender.text?.uppercased()
             sender.text = onlyCharModel.maskApplication(sender.text ?? "")

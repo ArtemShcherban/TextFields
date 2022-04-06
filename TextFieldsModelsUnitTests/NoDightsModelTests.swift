@@ -21,9 +21,19 @@ final class NoDightsModelTests: XCTestCase {
         try super.tearDownWithError()
     }
     
-    func testNoDightsModel() {
+    func testInputedStringlWithDightsAtTheEnd() {
         XCTAssertEqual(modelUnderTest.digitsExclusion("Swift2022"), "Swift")
+    }
+    
+    func testInputedStringWithDigitsAtTheBeginning() {
+        XCTAssertEqual(modelUnderTest.digitsExclusion("2022Swift"), "Swift")
+    }
+    
+    func testInputedStringWithDightsInTheMiddle() {
         XCTAssertEqual(modelUnderTest.digitsExclusion("Swift2022Swift"), "SwiftSwift")
-        XCTAssertEqual(modelUnderTest.digitsExclusion("@2022Swift2022@"), "@Swift@")
+    }
+    
+    func testInputedStringWithDigitsAndSymbols() {
+        XCTAssertEqual(modelUnderTest.digitsExclusion("@2022$Swift$2022@"), "@$Swift$@")
     }
 }
