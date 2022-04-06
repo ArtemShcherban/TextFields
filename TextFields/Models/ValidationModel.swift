@@ -23,8 +23,6 @@ final class ValidationModel {
         
         rulesArray.forEach { numberOfFulfilledRules += $0 ? 1 : 0 }
         
-        print(string)
-        
         return (rulesArray, numberOfFulfilledRules)
     }
 }

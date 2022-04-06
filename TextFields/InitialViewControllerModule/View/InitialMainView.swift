@@ -9,8 +9,8 @@ import UIKit
 
 final class InitialMainView: UIView {
     
-    lazy var singleViewButton = ControllerButton()
-    lazy var multipleViewsButton = ControllerButton()
+    lazy private var singleViewButton = ControllerButton()
+    lazy private var multipleViewsButton = ControllerButton()
     
     weak var delegate: InitialMainViewDelegate?
     
@@ -19,6 +19,7 @@ final class InitialMainView: UIView {
         addSubviews()
         setButtonTitles()
         addButtonTarget()
+        setButtonAccessibilityIdentifiers()
         setConstraints()
     }
     
@@ -32,9 +33,14 @@ final class InitialMainView: UIView {
         multipleViewsButton.setTitle(AppConstants.multipleViewsButtonTitle, for: .normal)
     }
     
-    func addButtonTarget() {
+    private func addButtonTarget() {
         singleViewButton.addTarget(delegate, action: #selector(delegate?.singleViewButtonTapped), for: .touchUpInside)
         multipleViewsButton.addTarget(delegate, action: #selector(delegate?.multipleViewsButtonTapped), for: .touchUpInside)
+    }
+    
+    private func setButtonAccessibilityIdentifiers() {
+        singleViewButton.accessibilityIdentifier = AppConstants.singleViewButtonTitle
+        multipleViewsButton.accessibilityIdentifier = AppConstants.multipleViewsButtonTitle
     }
     
     private func setConstraints() {

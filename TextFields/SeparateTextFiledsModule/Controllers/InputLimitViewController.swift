@@ -32,6 +32,5 @@ final class InputLimitViewController: UIViewController {
     @objc private func textFieldDidChanged(_ sender: InputLimitTextField) {
         textFieldMainView.countTextLabel.text = inputLimitModel.characterCounter(sender.text ?? "")
         sender.setColors()
-        textFieldMainView.countTextLabel.setTextColor()
     }
 }

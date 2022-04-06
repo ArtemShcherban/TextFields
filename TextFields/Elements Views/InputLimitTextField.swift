@@ -9,7 +9,7 @@ import UIKit
 
 final class InputLimitTextField: AdjustableTextField {
     
-    private let limit = AppConstants.maxNumberOfCharacters
+    let limit = AppConstants.maxNumberOfCharacters
     
     override init(frame: CGRect) {
         super.init(frame: frame)

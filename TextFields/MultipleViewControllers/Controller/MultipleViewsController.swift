@@ -36,6 +36,7 @@ final class MultipleViewsController: UITabBarController {
                                  validationRulesViewController], animated: false)
         self.tabBar.backgroundColor = ColorConstants.tabBarColor
         self.tabBar.unselectedItemTintColor = ColorConstants.graphiteColor
+        self.tabBar.accessibilityIdentifier = "MultipleViewsTabBar"
     }
     
     private func setTabBarTitle() {
@@ -43,6 +44,7 @@ final class MultipleViewsController: UITabBarController {
         var index = 0
         for item in items {
             item.title = AppConstants.subtitleNamesArray[index]
+            item.accessibilityIdentifier = String(index)
             index += 1
         }
     }
